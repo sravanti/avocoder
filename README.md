@@ -1,7 +1,9 @@
 #Avocoder: An Interface for Tangible Voice Manipulation
 
 Sravanti Tekumalla and Galen Chuang
+
 Created for MUS378: Deconstructive Audio, Professors Jenny Johnson and Nicholas Knouf
+
 Presented at the Ruhlman Conference 2015 at Wellesley College
 
 ## Overview
@@ -12,8 +14,11 @@ Our project was inspired by the vocoder, a synthesis technique used to reproduce
 ## MAX patches
 
 There are two modes: 
+
 __Uniform pitch__ – voice is set to two uniform pitches.
+
 __Relative pitch__ – every pitch in the voice is shifted by a defined value.
+
 
 ### Master MAX Patch
 
