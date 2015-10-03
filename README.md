@@ -1,15 +1,32 @@
-# avocoder
- An interface for tangible voice manipulation 
+#Avocoder: An Interface for Tangible Voice Manipulation
 
-#Artists’ Statement
+Sravanti Tekumalla and Galen Chuang
+Created for MUS378: Deconstructive Audio, Professors Jenny Johnson and Nicholas Knouf
+Presented at the Ruhlman Conference 2015 at Wellesley College
 
-Avocoder allows people to manipulate their voices by tangibly varying pitch, volume, and distortion. Modern musical synthesizers come with a myriad of preset patches and filters to manipulate pitch and voice, but through our experience creating patches for an analog synthesizer, we concluded that the abstraction of modern instruments creates complicity in how we interact with musical interfaces. Rather than accepting preset patches, we wanted to give people the chance to explore manipulating parameters of sound themselves in a hands-on manner, allowing them to explore beyond the paradigm of preset patches and microtones. 
+## Overview
+Avocoder is a musical interface created for MUS378: Deconstructive Audio. Built with Arduino and Max/MSP, our interface allows people to manipulate their voices by tangibly varying pitch, volume and distortion. Modern musical synthesizers come with a myriad of preset patches and filters to alter pitch and voice, and that abstraction creates an environment for passive interaction. We aim to give people the chance to directly manipulate parameters of sound with their hands and voice, allowing them to explore sound beyond the paradigm of rigid systems. We hope that people will take away an experience of playing with digital sound and the sound of their own voice in ways they hadn’t before, and that Avocoder encourages them to challenge predefined constraints of modern musical software. 
 
-We employed an organic process throughout the creation of Avocoder, testing the capacity and limitations of the software (Max/MSP) and hardware (Arduino) we worked with to create an aural experience that is at once interactive and captivating. Combining the acoustic elements of voice with the digital elements of computer software allows people to experience the deconstruction — and reconstruction — of their voice in a unique way. We were inspired by instruments such as the vocoder and analog synthesizer for their tangibility and modularity, and aimed to include a similar level of modularity in our subpatches. We also included the dual-microphone input for people to experience the interplay between two voices.  
+Our project was inspired by the vocoder, a synthesis technique used to reproduce human speech. The vocoder was originally developed for telecommunication purposes in the 1930s, using the ideas of “codifying” speech and encrypting sound to avoid interception by third parties. The vocoder works by performing digital signal processing to modify the voice input, measuring how its spectral, or ghost-like, characteristics change over time. Avocoder uses a similar technique to manipulate voice (or voices). 
 
-Rather than creating a composition with our interface, our intention behind creating Avocoder was to allow each individual to create a meaningful, personal experience through experimentation, much like our creative process. As such, people will hear glitches in the music they create, audio clipping and other unexpected sounds. These DSP “errors” are part of the overall effect, and shouldn’t be considered failures or shortcomings. As Cascone argues in her paper, The Aesthetics of Failure: “Post-Digital” Tendencies in Contemporary Computer Music, “The technique of exposing the minutiae of DSP errors and artifacts for their own sonic value has helped further blur the boundaries of what is to be considered music, but it has also forced us to also to
-examine our preconceptions of failure and detritus more carefully.” Avocoder provides examples of such blurred boundaries, and allows users to define sound and music on their own terms.
+## MAX patches
 
-The technical underpinnings of this project, namely our use of digital signaling processing, stems from concepts presented by Claude Shannon in his paper, The Mathematical Theory of Communication. Avocoder involves a large amount of data and as such, we had to consider the difference between “noise” and “information.” Whether this meant grouping together data or deciding what data was useful, discerning between noise and information was crucial for the functionality of our vocal synthesizer and to not overwhelm the user with our interface. We also took into consideration the three levels of communication that Shannon describes: technical, semantic and effectiveness and focused our efforts on the latter two. 
+There are two modes: 
+__Uniform pitch__ – voice is set to two uniform pitches.
+__Relative pitch__ – every pitch in the voice is shifted by a defined value.
 
-We hope that people will take away an experience of playing with digital sound and the sound of their own voice in ways they hadn’t before, and that Avocoder encourages them to challenge predefined constraints of modern musical software and instruments. 
+### Master MAX Patch
+
+![Alt text](/master_patch.png)
+
+### Uniform pitch MAX patch
+
+Two knob inputs are shown at the top, and calculations are performed on the data. Then, the data are converted into audio signals, which are then fed back into the main patch.
+
+![Alt text](/second_mic.png)
+
+### Second microphone MAX patch
+
+Audio signal from microphone 2 is inputted and converted into non-audio data, which is used to modify the output of microphone 1.
+
+![Alt text](/uniform_pitch.png)
