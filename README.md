@@ -28,12 +28,12 @@ __Relative pitch__ – every pitch in the voice is shifted by a defined value.
 
 ### Uniform pitch MAX patch
 
-Two knob inputs are shown at the top, and calculations are performed on the data. Then, the data are converted into audio signals, which are then fed back into the main patch.
+Two knob inputs are shown at the top, and calculations are performed on the data. Then, the data is converted into two audio signals, which are then fed back into the main patch.
 
 ![Alt text](/second_mic.png)
 
 ### Second microphone MAX patch
 
-Audio signal from microphone 2 is inputted and converted into non-audio data, which is used to modify the output of microphone 1.
+Audio signal from microphone 2 is input and converted into non-audio data, which is used to modify the output of microphone 1.
 
 ![Alt text](/uniform_pitch.png)
