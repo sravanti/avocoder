@@ -13,6 +13,8 @@ Our project was inspired by the vocoder, a synthesis technique used to reproduce
 
 ## MAX patches
 
+_Note: to use these patches, [download MAX/MSP](https://cycling74.com/products/max/). These patches were developed on versions 6 and 7._
+
 There are two modes: 
 
 __Uniform pitch__ – voice is set to two uniform pitches.
